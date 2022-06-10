@@ -1,2 +1,2 @@
 # theUncommonCommandSyntaxRepo
-A repository of commands/syntax that I have uncommonly used that I found useful.  
+A repository of commands/syntax that I uncommonly use (or that I commonly forget) that I find useful.
