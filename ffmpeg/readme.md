@@ -16,3 +16,12 @@
   <code>ffmpeg -video_size 100x100 -framerate 25 -f x11grab -i :0.0+200,300 output.mp4 </code> <br>
   
  > example 100x100 video shifted 200x and 300y at 25 fps
+
+
+<br><br>
+
+- convert a video into a high quality gif with a low file size
+
+  <code>vin="vid.mp4"; gout="output.gif"; ffmpeg -i videofile -vf palettegen palette.png; wait; \ </code>
+  
+  <code>ffmpeg -i $vin -i palette.png -filter_complex "fps=30,scale=600:-1:flags=lanczos[x];[x][1:v]paletteuse" -y $gout</code>
