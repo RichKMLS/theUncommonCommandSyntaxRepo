@@ -22,6 +22,6 @@
 
 - convert a video into a high quality gif with a low file size
 
-  <code>vin="vid.mp4"; gout="output.gif"; ffmpeg -i vin -vf palettegen palette.png; wait; \ </code>
+  <code>vin="vid.mp4"; gout="output.gif"; ffmpeg -i $vin -vf palettegen palette.png; wait; \ </code>
   
   <code>ffmpeg -i $vin -i palette.png -filter_complex "fps=30,scale=600:-1:flags=lanczos[x];[x][1:v]paletteuse" -y $gout</code>
